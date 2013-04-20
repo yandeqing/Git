@@ -1,5 +1,9 @@
 package com.password.constant;
 
 public enum LockType {
-	PATTER,MOVE,NUMERIC,GESTURES
+	PATTERN,
+	NUMERIC,
+	GESTURE,
+	ALFA_NUMERIC
+	
 }

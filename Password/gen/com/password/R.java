@@ -40,14 +40,16 @@ public final class R {
         public static final int stealth_mode=0x7f090001;
     }
     public static final class layout {
-        public static final int activity_main=0x7f030000;
-        public static final int activity_preferences=0x7f030001;
-        public static final int alp_lock_pattern_activity=0x7f030002;
-        public static final int alp_lock_pattern_view=0x7f030003;
+        public static final int activity_create_pattern=0x7f030000;
+        public static final int activity_main=0x7f030001;
+        public static final int activity_preferences=0x7f030002;
+        public static final int alp_lock_pattern_activity=0x7f030003;
+        public static final int alp_lock_pattern_view=0x7f030004;
     }
     public static final class menu {
-        public static final int activity_main=0x7f080000;
-        public static final int activity_preferences=0x7f080001;
+        public static final int activity_create_pattern=0x7f080000;
+        public static final int activity_main=0x7f080001;
+        public static final int activity_preferences=0x7f080002;
     }
     public static final class string {
         public static final int alp_app_name=0x7f050000;
@@ -66,30 +68,40 @@ public final class R {
         public static final int alp_msg_release_finger_when_done=0x7f05000d;
         public static final int alp_msg_try_again=0x7f05000e;
         public static final int alp_msg_your_new_unlock_pattern=0x7f05000f;
-        public static final int app_name=0x7f050010;
-        public static final int dialog_based_preferences=0x7f050017;
-        public static final int dialog_title_edittext_preference=0x7f050018;
-        public static final int dialog_title_list_preference=0x7f05001b;
-        public static final int hello_world=0x7f050011;
-        public static final int inline_preferences=0x7f050015;
-        public static final int launch_preferences=0x7f05001e;
-        public static final int menu_settings=0x7f050012;
-        public static final int preference_attributes=0x7f050025;
-        public static final int summary_edittext_preference=0x7f05001a;
-        public static final int summary_intent_preference=0x7f050024;
-        public static final int summary_list_preference=0x7f05001d;
-        public static final int summary_next_screen_toggle_preference=0x7f050022;
-        public static final int summary_parent_preference=0x7f050027;
-        public static final int summary_screen_preference=0x7f050020;
-        public static final int summary_toggle_preference=0x7f050016;
-        public static final int title_activity_preferences=0x7f050013;
-        public static final int title_edittext_preference=0x7f050019;
-        public static final int title_intent_preference=0x7f050023;
-        public static final int title_list_preference=0x7f05001c;
-        public static final int title_next_screen_toggle_preference=0x7f050021;
-        public static final int title_parent_preference=0x7f050026;
-        public static final int title_screen_preference=0x7f05001f;
-        public static final int title_toggle_preference=0x7f050014;
+        public static final int app_name=0x7f050019;
+        public static final int dialog_based_preferences=0x7f050020;
+        public static final int dialog_title_edittext_preference=0x7f050021;
+        public static final int dialog_title_list_preference=0x7f050024;
+        public static final int hello_world=0x7f05001a;
+        public static final int inline_preferences=0x7f05001e;
+        public static final int launch_preferences=0x7f050027;
+        public static final int menu_settings=0x7f05001b;
+        public static final int preference_attributes=0x7f05002e;
+        public static final int summary_edittext_preference=0x7f050023;
+        public static final int summary_enable_alfa_numeric_mode=0x7f050018;
+        public static final int summary_enable_block_pattern_mode=0x7f050012;
+        public static final int summary_enable_gesture_mode=0x7f050014;
+        public static final int summary_enable_numeric_mode=0x7f050016;
+        public static final int summary_intent_preference=0x7f05002d;
+        public static final int summary_list_preference=0x7f050026;
+        public static final int summary_next_screen_toggle_preference=0x7f05002b;
+        public static final int summary_parent_preference=0x7f050030;
+        public static final int summary_screen_preference=0x7f050029;
+        public static final int summary_toggle_preference=0x7f05001f;
+        public static final int title_activity_create_pattern=0x7f050031;
+        public static final int title_activity_preferences=0x7f05001c;
+        public static final int title_edittext_preference=0x7f050022;
+        public static final int title_intent_preference=0x7f05002c;
+        public static final int title_list_preference=0x7f050025;
+        public static final int title_next_screen_toggle_preference=0x7f05002a;
+        public static final int title_parent_preference=0x7f05002f;
+        public static final int title_screen_preference=0x7f050028;
+        public static final int title_security_preference_category=0x7f050010;
+        public static final int title_toggle_preference=0x7f05001d;
+        public static final int toggle_enable_alfa_numeric_mode=0x7f050017;
+        public static final int toggle_enable_block_pattern_mode=0x7f050011;
+        public static final int toggle_enable_gesture_mode=0x7f050013;
+        public static final int toggle_enable_numeric_mode=0x7f050015;
     }
     public static final class style {
         public static final int Alp_Theme_Dark=0x7f060000;

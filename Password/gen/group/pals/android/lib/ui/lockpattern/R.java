@@ -37,8 +37,8 @@ public final class R {
 		public static final int alp_msg_release_finger_when_done = 0x7f05000d;
 	}
 	public static final class layout {
-		public static final int alp_lock_pattern_activity = 0x7f030002;
-		public static final int alp_lock_pattern_view = 0x7f030003;
+		public static final int alp_lock_pattern_activity = 0x7f030003;
+		public static final int alp_lock_pattern_view = 0x7f030004;
 	}
 	public static final class drawable {
 		public static final int alp_btn_code_lock_default_holo = 0x7f020000;

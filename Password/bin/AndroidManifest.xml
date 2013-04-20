@@ -30,6 +30,10 @@
             android:name="com.password.Preferences"
             android:label="@string/title_activity_preferences" >
         </activity>
+        <activity
+            android:name="com.password.CreatePatternActivity"
+            android:label="@string/title_activity_create_pattern" >
+        </activity>
     </application>
 
 </manifest>

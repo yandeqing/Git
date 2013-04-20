@@ -1,6 +1,13 @@
 package com.password;
 
+import group.pals.android.lib.ui.lockpattern.LockPatternActivity;
+
+import com.password.constant.LockType;
+import com.password.constant.LockTypeKey;
+
 import android.content.Intent;
+import android.content.SharedPreferences;
+import android.content.SharedPreferences.OnSharedPreferenceChangeListener;
 import android.content.res.TypedArray;
 import android.net.Uri;
 import android.os.Bundle;
@@ -9,33 +16,89 @@ import android.preference.EditTextPreference;
 import android.preference.ListPreference;
 import android.preference.PreferenceActivity;
 import android.preference.PreferenceCategory;
+import android.preference.PreferenceManager;
 import android.preference.PreferenceScreen;
 import android.view.Menu;
 
-public class Preferences extends 	PreferenceActivity {
-
+public class Preferences extends 	PreferenceActivity implements OnSharedPreferenceChangeListener{
+	private final short createPatternLock = 1;
+	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
        
         setPreferenceScreen(createPreferenceHierarchy());
+        
+        
+        MainActivity.accessHandler.registerPreferencesListener(this);
+        
     }
  
     private PreferenceScreen createPreferenceHierarchy() {
         // Root
         PreferenceScreen root = getPreferenceManager().createPreferenceScreen(this);
+        
+        
+        PreferenceCategory securityPreferenceCategory = new PreferenceCategory(this);
+        securityPreferenceCategory.setTitle(R.string.title_security_preference_category);
+        root.addPreference(securityPreferenceCategory);
+        
+  
        
+        // Pattern block mode
+        CheckBoxPreference nextScreenCheckBoxPref = new CheckBoxPreference(this);
+        nextScreenCheckBoxPref.setKey(LockType.PATTERN.toString());
+        nextScreenCheckBoxPref.setTitle(R.string.toggle_enable_block_pattern_mode);
+        nextScreenCheckBoxPref.setSummary(R.string.summary_enable_block_pattern_mode);
+        nextScreenCheckBoxPref.setIcon(android.R.drawable.ic_menu_manage);
+        securityPreferenceCategory.addPreference(nextScreenCheckBoxPref);
+        
+  
+        
+        //Numeric block mode
+        CheckBoxPreference numericMode = new CheckBoxPreference(this);
+        numericMode.setKey(LockType.NUMERIC.toString());
+        numericMode.setTitle(R.string.toggle_enable_numeric_mode);
+        numericMode.setSummary(R.string.summary_enable_numeric_mode);
+        numericMode.setIcon(android.R.drawable.ic_dialog_dialer);
+        securityPreferenceCategory.addPreference(numericMode);
+        
+      
+        
+        //Gesture block mode
+        CheckBoxPreference gestureMode = new CheckBoxPreference(this);
+        gestureMode.setKey(LockType.GESTURE.toString());
+        gestureMode.setTitle(R.string.toggle_enable_gesture_mode);
+        gestureMode.setSummary(R.string.summary_enable_gesture_mode);
+        securityPreferenceCategory.addPreference(gestureMode);
+        
+       
+        
+      //Alfanumerico block mode
+        CheckBoxPreference alfaNumericMode = new CheckBoxPreference(this);
+        alfaNumericMode.setKey(LockType.ALFA_NUMERIC.toString());
+        alfaNumericMode.setTitle(R.string.toggle_enable_alfa_numeric_mode);
+        alfaNumericMode.setSummary(R.string.summary_enable_alfa_numeric_mode);
+        alfaNumericMode.setIcon(android.R.drawable.ic_menu_preferences);
+        securityPreferenceCategory.addPreference(alfaNumericMode);
+        
+       
+        
+      /*
         // Inline preferences
         PreferenceCategory inlinePrefCat = new PreferenceCategory(this);
         inlinePrefCat.setTitle(R.string.inline_preferences);
         root.addPreference(inlinePrefCat);
        
-        // Toggle preference
+        // Toggle preference pattern
         CheckBoxPreference togglePref = new CheckBoxPreference(this);
-        togglePref.setKey("toggle_preference");
-        togglePref.setTitle(R.string.title_toggle_preference);
-        togglePref.setSummary(R.string.summary_toggle_preference);
+        togglePref.setKey("toggle_preference_pattern");
+        togglePref.setTitle(R.string.pattern_toggle_pattern);
+        togglePref.setSummary(R.string.summary_toggle_pattern);
         inlinePrefCat.addPreference(togglePref);
+        
+        
+        
                
         // Dialog based preferences
         PreferenceCategory dialogBasedPrefCat = new PreferenceCategory(this);
@@ -65,11 +128,11 @@ public class Preferences extends 	PreferenceActivity {
         launchPrefCat.setTitle(R.string.launch_preferences);
         root.addPreference(launchPrefCat);
  
-        /*
+        /
          * The Preferences screenPref serves as a screen break (similar to page
          * break in word processing). Like for other preference types, we assign
          * a key here so that it is able to save and restore its instance state.
-         */
+         *
         // Screen preference
         PreferenceScreen screenPref = getPreferenceManager().createPreferenceScreen(this);
         screenPref.setKey("screen_preference");
@@ -77,10 +140,10 @@ public class Preferences extends 	PreferenceActivity {
         screenPref.setSummary(R.string.summary_screen_preference);
         launchPrefCat.addPreference(screenPref);
        
-        /*
+        *
          * You can add more preferences to screenPref that will be shown on the
          * next screen.
-         */
+         *
        
         // Example of next screen toggle preference
         CheckBoxPreference nextScreenCheckBoxPref = new CheckBoxPreference(this);
@@ -107,9 +170,61 @@ public class Preferences extends 	PreferenceActivity {
         parentCheckBoxPref.setTitle(R.string.title_parent_preference);
         parentCheckBoxPref.setSummary(R.string.summary_parent_preference);
         prefAttrsCat.addPreference(parentCheckBoxPref);
-       
+       */
   
         return root;
     }
+
+	@Override
+	public void onSharedPreferenceChanged(SharedPreferences sharedPreferences,
+			String key) {
+		System.out.println("here");
+		System.out.println(key);
+		CheckBoxPreference cbp = null;
+		boolean value = false;
+		if(LockType.PATTERN.toString() ==key){
+			cbp =(CheckBoxPreference)getPreferenceScreen().findPreference(key);
+			value = sharedPreferences.getBoolean(key, false);
+			cbp.setChecked(value);
+			if(value==true){
+				 Intent i = new Intent(LockPatternActivity._ActionCreatePattern,null,
+						 Preferences.this, LockPatternActivity.class);
+		         i.putExtra(LockPatternActivity._Theme,R.style.Alp_Theme_Dark);		        
+		         //i.putExtra(LockPatternActivity._EncrypterClass, LPEncrypter.class);
+		         //i.putExtra(LockPatternActivity._AutoSave, true);
+		         startActivityForResult(i, createPatternLock);
+			}
+			
+		}
+		else if(LockType.GESTURE.toString() ==key){
+			cbp =(CheckBoxPreference)getPreferenceScreen().findPreference(key);
+			cbp.setChecked(sharedPreferences.getBoolean(key, false));
+		}
+		else if(LockType.NUMERIC.toString() ==key){
+			cbp =(CheckBoxPreference)getPreferenceScreen().findPreference(key);
+			cbp.setChecked(sharedPreferences.getBoolean(key, false));
+		}
+		else if(LockType.ALFA_NUMERIC.toString() ==key){
+			cbp =(CheckBoxPreference)getPreferenceScreen().findPreference(key);
+			cbp.setChecked(sharedPreferences.getBoolean(key, false));
+		}
+		
+	}
+	
+	@Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        switch (requestCode) {
+        case createPatternLock:
+        	System.out.println(resultCode  + " "+ RESULT_OK );
+            if (resultCode == RESULT_OK){               
+                String pattern = data.getStringExtra(LockPatternActivity._Pattern);
+                MainActivity.accessHandler.updatePreference(LockTypeKey.PATTERN_KEY.toString(), pattern);
+            }
+            else
+                MainActivity.accessHandler.updatePreference(LockType.PATTERN.toString(), false);
+            break;// _ReqCreateLockPattern
+
+        }
+    }// onActivityResult()
 
 }
