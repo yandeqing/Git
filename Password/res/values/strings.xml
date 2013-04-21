@@ -2,20 +2,14 @@
 <resources>
 
     <string name="title_security_preference_category">Seguridad</string>
-    
     <string name="toggle_enable_block_pattern_mode">Bloqueo con patrón</string>
-    <string name="summary_enable_block_pattern_mode">Activa o desactiva el bloqueo con patrón.</string>     
-   
+    <string name="summary_enable_block_pattern_mode">Activa o desactiva el bloqueo con patrón.</string>
     <string name="toggle_enable_gesture_mode">Bloqueo con gestos.</string>
-    <string name="summary_enable_gesture_mode">Activa o desactiva el bloqueo con gestos.</string>     
-    
+    <string name="summary_enable_gesture_mode">Activa o desactiva el bloqueo con gestos.</string>
     <string name="toggle_enable_numeric_mode">Bloqueo con dígitos.</string>
-    <string name="summary_enable_numeric_mode">Activa o desactiva el bloqueo con dígitos.</string>     
-    
+    <string name="summary_enable_numeric_mode">Activa o desactiva el bloqueo con dígitos.</string>
     <string name="toggle_enable_alfa_numeric_mode">Bloqueo alfanumérico.</string>
-    <string name="summary_enable_alfa_numeric_mode">Activa o desactiva el bloqueo alfanumérico.</string>     
-    
-    
+    <string name="summary_enable_alfa_numeric_mode">Activa o desactiva el bloqueo alfanumérico.</string>
     <string name="app_name">Password</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
@@ -53,5 +47,8 @@
     <string name="summary_intent_preference">summary_intent_preference</string>
     <string name="preference_attributes">preference_attributes</string>
     <string name="title_activity_create_pattern">CreatePatternActivity</string>
+    <string name="title_activity_show_category_list">ShowCategoryListActivity</string>
+    <string name="title_activity_alfanumeric">AlfanumericActivity</string>
+    <string name="title_activity_numeric">NumericActivity</string>
 
 </resources>

@@ -28,28 +28,40 @@ public final class R {
         public static final int ic_launcher=0x7f020007;
     }
     public static final class id {
-        public static final int alp_cancel=0x7f090007;
-        public static final int alp_confirm=0x7f090008;
-        public static final int alp_footer=0x7f090006;
-        public static final int alp_info=0x7f090004;
-        public static final int alp_lock_pattern=0x7f090005;
-        public static final int create_lockpattern=0x7f090002;
-        public static final int dialog=0x7f090000;
-        public static final int enter_lockpattern=0x7f090003;
-        public static final int menu_settings=0x7f090009;
-        public static final int stealth_mode=0x7f090001;
+        public static final int alp_cancel=0x7f09000d;
+        public static final int alp_confirm=0x7f09000e;
+        public static final int alp_footer=0x7f09000c;
+        public static final int alp_info=0x7f09000a;
+        public static final int alp_lock_pattern=0x7f09000b;
+        public static final int buttonCancel=0x7f090004;
+        public static final int buttonContinue=0x7f090003;
+        public static final int create_lockpattern=0x7f090008;
+        public static final int dialog=0x7f090006;
+        public static final int enter_lockpattern=0x7f090009;
+        public static final int menu_settings=0x7f09000f;
+        public static final int psw=0x7f090000;
+        public static final int pswConfirm=0x7f090005;
+        public static final int stealth_mode=0x7f090007;
+        public static final int textError=0x7f090002;
+        public static final int textTittle=0x7f090001;
     }
     public static final class layout {
-        public static final int activity_create_pattern=0x7f030000;
-        public static final int activity_main=0x7f030001;
-        public static final int activity_preferences=0x7f030002;
-        public static final int alp_lock_pattern_activity=0x7f030003;
-        public static final int alp_lock_pattern_view=0x7f030004;
+        public static final int activity_alfanumeric=0x7f030000;
+        public static final int activity_create_pattern=0x7f030001;
+        public static final int activity_main=0x7f030002;
+        public static final int activity_numeric=0x7f030003;
+        public static final int activity_preferences=0x7f030004;
+        public static final int activity_show_category_list=0x7f030005;
+        public static final int alp_lock_pattern_activity=0x7f030006;
+        public static final int alp_lock_pattern_view=0x7f030007;
     }
     public static final class menu {
-        public static final int activity_create_pattern=0x7f080000;
-        public static final int activity_main=0x7f080001;
-        public static final int activity_preferences=0x7f080002;
+        public static final int activity_alfanumeric=0x7f080000;
+        public static final int activity_create_pattern=0x7f080001;
+        public static final int activity_main=0x7f080002;
+        public static final int activity_numeric=0x7f080003;
+        public static final int activity_preferences=0x7f080004;
+        public static final int activity_show_category_list=0x7f080005;
     }
     public static final class string {
         public static final int alp_app_name=0x7f050000;
@@ -88,8 +100,11 @@ public final class R {
         public static final int summary_parent_preference=0x7f050030;
         public static final int summary_screen_preference=0x7f050029;
         public static final int summary_toggle_preference=0x7f05001f;
+        public static final int title_activity_alfanumeric=0x7f050033;
         public static final int title_activity_create_pattern=0x7f050031;
+        public static final int title_activity_numeric=0x7f050034;
         public static final int title_activity_preferences=0x7f05001c;
+        public static final int title_activity_show_category_list=0x7f050032;
         public static final int title_edittext_preference=0x7f050022;
         public static final int title_intent_preference=0x7f05002c;
         public static final int title_list_preference=0x7f050025;

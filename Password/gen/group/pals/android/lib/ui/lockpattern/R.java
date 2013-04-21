@@ -8,11 +8,11 @@ package group.pals.android.lib.ui.lockpattern;
 
 public final class R {
 	public static final class id {
-		public static final int alp_cancel = 0x7f090007;
-		public static final int alp_info = 0x7f090004;
-		public static final int alp_lock_pattern = 0x7f090005;
-		public static final int alp_footer = 0x7f090006;
-		public static final int alp_confirm = 0x7f090008;
+		public static final int alp_cancel = 0x7f09000d;
+		public static final int alp_info = 0x7f09000a;
+		public static final int alp_lock_pattern = 0x7f09000b;
+		public static final int alp_footer = 0x7f09000c;
+		public static final int alp_confirm = 0x7f09000e;
 	}
 	public static final class style {
 		public static final int Alp_Theme_Dark = 0x7f060000;
@@ -37,8 +37,8 @@ public final class R {
 		public static final int alp_msg_release_finger_when_done = 0x7f05000d;
 	}
 	public static final class layout {
-		public static final int alp_lock_pattern_activity = 0x7f030003;
-		public static final int alp_lock_pattern_view = 0x7f030004;
+		public static final int alp_lock_pattern_activity = 0x7f030006;
+		public static final int alp_lock_pattern_view = 0x7f030007;
 	}
 	public static final class drawable {
 		public static final int alp_btn_code_lock_default_holo = 0x7f020000;

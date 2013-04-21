@@ -4,6 +4,7 @@ import group.pals.android.lib.ui.lockpattern.LockPatternActivity;
 
 import com.password.constant.LockType;
 import com.password.constant.LockTypeKey;
+import com.password.util.Utils;
 
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -22,6 +23,8 @@ import android.view.Menu;
 
 public class Preferences extends 	PreferenceActivity implements OnSharedPreferenceChangeListener{
 	private final short createPatternLock = 1;
+	private final short createAlfaNumericLock = 2;
+	private final short createNumericLock = 3;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -202,11 +205,22 @@ public class Preferences extends 	PreferenceActivity implements OnSharedPreferen
 		}
 		else if(LockType.NUMERIC.toString() ==key){
 			cbp =(CheckBoxPreference)getPreferenceScreen().findPreference(key);
-			cbp.setChecked(sharedPreferences.getBoolean(key, false));
+			value = sharedPreferences.getBoolean(key, false);
+			cbp.setChecked(value);
+			if(value==true){
+				Intent i = new Intent(Preferences.this, NumericActivity.class);		 
+		        startActivityForResult(i, createNumericLock);
+			}
 		}
 		else if(LockType.ALFA_NUMERIC.toString() ==key){
 			cbp =(CheckBoxPreference)getPreferenceScreen().findPreference(key);
-			cbp.setChecked(sharedPreferences.getBoolean(key, false));
+		    value = sharedPreferences.getBoolean(key, false);
+			cbp.setChecked(value);
+			if(value==true){
+				Intent i = new Intent(Preferences.this, AlfanumericActivity.class);		 
+		        startActivityForResult(i, createAlfaNumericLock);
+			}
+			
 		}
 		
 	}
@@ -223,8 +237,28 @@ public class Preferences extends 	PreferenceActivity implements OnSharedPreferen
             else
                 MainActivity.accessHandler.updatePreference(LockType.PATTERN.toString(), false);
             break;// _ReqCreateLockPattern
+        case createAlfaNumericLock:
+        	System.out.println(resultCode  + " "+ RESULT_OK );
+            if (resultCode == RESULT_OK){               
+                String pattern = data.getStringExtra("password");
+                MainActivity.accessHandler.updatePreference(LockTypeKey.ALFA_NUMERIC_KEY.toString(), pattern);
+            }
+            else
+                MainActivity.accessHandler.updatePreference(LockType.ALFA_NUMERIC.toString(), false);
+        	break;
+        case createNumericLock:
+        	System.out.println(resultCode  + " "+ RESULT_OK );
+            if (resultCode == RESULT_OK){               
+                String pattern = data.getStringExtra("password");
+                MainActivity.accessHandler.updatePreference(LockTypeKey.NUMERIC_KEY.toString(), pattern);
+            }
+            else
+                MainActivity.accessHandler.updatePreference(LockType.NUMERIC.toString(), false);
+        	break;
 
         }
+        
+        
     }// onActivityResult()
 
 }

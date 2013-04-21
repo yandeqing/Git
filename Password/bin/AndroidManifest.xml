@@ -34,6 +34,18 @@
             android:name="com.password.CreatePatternActivity"
             android:label="@string/title_activity_create_pattern" >
         </activity>
+        <activity
+            android:name="com.password.ShowCategoryListActivity"
+            android:label="@string/title_activity_show_category_list" >
+        </activity>
+        <activity
+            android:name="com.password.AlfanumericActivity"
+            android:label="@string/title_activity_alfanumeric" >
+        </activity>
+        <activity
+            android:name="com.password.NumericActivity"
+            android:label="@string/title_activity_numeric" >
+        </activity>
     </application>
 
 </manifest>
