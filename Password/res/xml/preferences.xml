@@ -1,0 +1,39 @@
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+            android:title="@string/preferences_title">
+            
+        <ListPreference
+                android:key="id_cat_t"
+                android:title="@string/title_list_preference"
+                android:summary="@string/summary_list_preference"/>
+        
+        <EditTextPreference
+                android:key="name_t"
+                android:title="@string/title_name"
+                android:summary="@string/summary_name" />
+        
+        <EditTextPreference
+                android:key="user_t"
+                android:title="@string/title_user"
+                android:summary="@string/summary_user" />
+        
+        <EditTextPreference
+                android:key="password_t"
+                android:title="@string/title_pass"
+                android:summary="@string/summary_pass" />
+        
+        <EditTextPreference
+                android:key="notes_t"
+                android:title="@string/title_notes"
+                android:summary="@string/summary_notes" />
+        
+
+        <CheckBoxPreference
+                android:key="stablishment_t"
+                android:title="@string/title_checkbox_preference"
+                android:summary="@string/summary_checkbox_preference" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

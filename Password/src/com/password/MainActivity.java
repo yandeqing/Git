@@ -37,7 +37,9 @@ public class MainActivity extends Activity {
 
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
-    	
+    	Intent i = new Intent(this,com.example.password.MainActivity.class);
+    	startActivity(i);
+    	finish();
     }
     
     @Override
@@ -63,7 +65,7 @@ public class MainActivity extends Activity {
     protected void onPause(){
     	super.onPause();
     	System.out.println("on pause");
-    	this.paused = true;
+    	//this.paused = true;
     }
 
     @Override

@@ -11,7 +11,7 @@
     <string name="toggle_enable_alfa_numeric_mode">Bloqueo alfanumérico.</string>
     <string name="summary_enable_alfa_numeric_mode">Activa o desactiva el bloqueo alfanumérico.</string>
     <string name="app_name">Password</string>
-    <string name="hello_world">Hello world!</string>
+    <string name="hello_world">Bienvenido :P</string>
     <string name="menu_settings">Settings</string>
     <string name="title_activity_preferences">Preferences</string>
     <string name="title_toggle_preference">title_toggle_preference</string>
@@ -100,5 +100,57 @@
     <string name="title_activity_validate_numeric_lock">ValidateNumericLock</string>
     <string name="title_activity_validate_alfa_numeric_lock">ValidateAlfaNumericLock</string>
     <string name="title_activity_validate_gesture_lock">ValidateGestureLock</string>
+    
+    
+       <string name="app_name">PASSWORD</string>
+    <string name="menu_settings">Ajustes</string>
+    <string name="addPass">AGREGAR NUEVA CONTRASEÑA</string>
+    <string name="consultPass">Consultar contraseñas</string>
+    <string name="settingsPass">Ajustes</string>
+    <string name="title_activity_add_pass">PASSWORD</string>
+    <string name="menu_save">Guardar</string>
+    <string name="menu_archive">Almacenar</string>
+    <string name="menu_delete">Borrar</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="title_activity_list_fragment">ListFragment</string>
+    <string name="list_title">PASSWORD</string>
+    <string name="empty_list">Lista vacía</string>
+    <string name="title_activity_category_list">CategoryList</string>
+    <string name="title_activity_select_category">SelectCategory</string>
+    <string name="preferences_title">DATOS DE LA CUENTA</string>
+    <string name="title_list_preference">Categoría</string>
+    <string name="summary_list_preference">Categoría de la cuenta</string>
+    <string name="title_name">Nombre</string>
+    <string name="summary_name">Nombre de la cuenta</string>
+    <string name="title_user">Usuario</string>
+    <string name="summary_user">Nombre de usuario</string>
+    <string name="title_pass">Contraseña</string>
+    <string name="summary_pass">Contraseña completa</string>
+    <string name="title_notes">Notas</string>
+    <string name="summary_notes">Notas de la cuenta</string>
+    <string name="title_checkbox_preference">Establecimiento</string>
+    <string name="summary_checkbox_preference">¿Es un establecimiento?</string>
+    <string name="preferences_title2">CONSULTA CONTRASEÑA</string>
+    <string name="title_activity_consult_pass">PASSWORD</string>
+    <string name="title_list_preference_cat">Categoría</string>
+    <string name="summary_list_preference_cat">Consulta categoría</string>
+    <string name="title_list_preference_name">Nombre</string>
+    <string name="summary_list_preference_name">Consulta nombre</string>
+    <string name="icon">Icono</string>
+    <string name="title_activity_view_categories">Vista de categorías</string>
+    <string name="title_activity_example">PASSWORD</string>
+    <string name="title_activity_list_example">Lista de ejemplo</string>
+    <string name="title_activity_consult">PASSWORD</string>
+    <string name="name_count">Nombre de la cuenta:</string>
+    <string name="user_count">Usuario:</string>
+    <string name="password_count">Contraseña:</string>
+    <string name="notes_count">Notas:</string>
+    <string name="title_activity_show_settings">PASSWORD</string>
+    <string name="title_activity_settings_list_fragment">PASSWORD</string>
+    <string name="title_activity_activity_settings">PASSWORD</string>
+    <string name="preferences_title3">NUEVA CATEGORIA</string>
+    <string name="new_category">Categoría</string>
+    <string name="summary_new_category">Nombre de una nueva categoría</string>
+    <string name="title_activity_main">Your Nearest Places</string>
 
 </resources>

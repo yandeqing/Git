@@ -1,0 +1,13 @@
+<PreferenceScreen
+        xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+            android:title="@string/preferences_title3">
+            
+           <EditTextPreference
+                android:key="new_category"
+                android:title="@string/new_category"
+                android:summary="@string/summary_new_category" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

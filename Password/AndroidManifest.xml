@@ -9,12 +9,21 @@
         android:targetSdkVersion="14" />
 
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- Internet Permissions -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!-- Network State Permissions -->
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <!-- Access Location -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+        
+    
 
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
+        <uses-library android:name="com.google.android.maps" />
         <activity
             android:name="com.password.MainActivity"
             android:label="@string/app_name" >
@@ -76,6 +85,78 @@
             android:name="com.password.ValidateGestureLock"
             android:label="@string/title_activity_validate_gesture_lock" >
         </activity>
+        
+        
+        
+          <activity
+            android:name="com.example.password.MainActivity"
+            android:label="@string/app_name" >
+        </activity>
+        <activity
+            android:name="com.example.password.AddPass"
+            android:label="@string/title_activity_add_pass" >
+        </activity>
+        <activity
+            android:name="com.example.password.ListFragment"
+            android:label="@string/title_activity_list_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.password.CategoryList"
+            android:label="@string/title_activity_category_list" >
+        </activity>
+        <activity
+            android:name="com.example.password.SelectCategory"
+            android:label="@string/title_activity_select_category" >
+        </activity>
+        <activity
+            android:name="com.example.password.ConsultPass"
+            android:label="@string/title_activity_consult_pass" >
+        </activity>
+        <activity
+            android:name="com.example.password.ViewCategories"
+            android:label="@string/title_activity_view_categories" >
+        </activity>
+        <activity
+            android:name="com.example.password.Example"
+            android:label="@string/title_activity_example" >
+        </activity>
+        <activity
+            android:name="com.example.password.ListExample"
+            android:label="@string/title_activity_list_example" >
+        </activity>
+        <activity
+            android:name="com.example.password.Consult"
+            android:label="@string/title_activity_consult" >
+        </activity>
+        <activity
+            android:name="com.example.password.ShowSettings"
+            android:label="@string/title_activity_show_settings" >
+        </activity>
+        <activity
+            android:name="com.example.password.SettingsListFragment"
+            android:label="@string/title_activity_settings_list_fragment" >
+        </activity>
+        <activity
+            android:name="com.example.password.ActivitySettings"
+            android:label="@string/title_activity_activity_settings" >
+        </activity>
+        
+        
+    <!-- SinglePlaceActivity -->
+    <activity android:name="com.androidhive.googleplacesandmaps.SinglePlaceActivity" 
+        	  android:label="Place Details">
+        		</activity>
+        
+    <!-- PlacesMapActivity -->
+    <activity android:name="com.androidhive.googleplacesandmaps.PlacesMapActivity" 
+        	  android:label="Near Places Map View">
+		</activity>
+		
+    <activity
+            android:name="com.androidhive.googleplacesandmaps.MainActivity"
+            android:label="@string/title_activity_main" >
+   </activity>
+        
     </application>
 
 </manifest>
