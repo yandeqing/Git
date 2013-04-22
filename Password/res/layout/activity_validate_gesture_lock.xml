@@ -1,0 +1,23 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    
+<TextView  
+    android:layout_width="fill_parent" 
+    android:layout_height="wrap_content" 
+    android:textAppearance="?android:attr/textAppearanceMedium" 
+    android:gravity="center_horizontal" 
+    android:text="Dibuja el gesto para validar" 
+    android:layout_margin="0dip"/>
+    
+<android.gesture.GestureOverlayView
+    android:id="@+id/gestures"
+    android:layout_width="match_parent"
+    android:layout_height="330dp"
+    android:gestureStrokeType="multiple" />
+
+ 
+    
+
+</LinearLayout>

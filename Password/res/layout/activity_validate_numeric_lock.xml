@@ -1,0 +1,67 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#DDDDDD">
+
+     <EditText
+         android:id="@+id/psw"
+         android:layout_width="150dip"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/textTittle"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="18dp"
+         android:background="@android:drawable/editbox_background"
+         android:ems="10"
+         android:password="true" 
+         android:inputType="phone" 
+        android:digits="1234567890"
+        android:maxLength="4"
+        android:selectAllOnFocus="true">
+
+         <requestFocus />
+     </EditText>
+
+     
+    <TextView
+         android:id="@+id/textError"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/psw"
+         android:layout_centerHorizontal="true"
+         android:textColor="#AA0000"
+         android:textSize="7pt" />
+         
+         
+     <Button
+         android:id="@+id/buttonContinue"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignBaseline="@+id/buttonCancel"
+         android:layout_alignBottom="@+id/buttonCancel"
+         android:layout_alignParentRight="true"
+         android:layout_marginRight="26dp"
+         android:text="Ingresar" />
+
+     <Button
+         android:id="@+id/buttonCancel"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_below="@+id/textError"
+         android:layout_marginRight="25dp"
+         android:layout_toLeftOf="@+id/buttonContinue"
+         android:text="CANCELAR" />
+
+    
+
+     <TextView
+         android:id="@+id/textTittle"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentTop="true"
+         android:layout_centerHorizontal="true"
+         android:layout_marginTop="15dp"
+         android:text="Ingresa tu PIN"
+         android:textColor="#444444"
+         android:textSize="8pt" />
+
+</RelativeLayout>
