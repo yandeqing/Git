@@ -34,7 +34,13 @@ public class AccessHandler {
 		return preferences.contains(key);
 	}
 	
+	public String getStringValue(String key){
+		return preferences.getString(key, "");
+	}
 	
+	public boolean getBooleanValue(String key){
+		return preferences.getBoolean(key, false);
+	}
 	
 	public void registerPreferencesListener(OnSharedPreferenceChangeListener listener){
 		this.preferences.registerOnSharedPreferenceChangeListener(listener);

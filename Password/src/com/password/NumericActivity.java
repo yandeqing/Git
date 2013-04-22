@@ -117,8 +117,12 @@ public class NumericActivity extends Activity{
 		
 		
 	}
-
-
+	
+	@Override
+	public void onPause(){
+	    super.onPause();
+	    System.out.println("on pause");
+	}
 
 }
 

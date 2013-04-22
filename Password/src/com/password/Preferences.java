@@ -25,6 +25,7 @@ public class Preferences extends 	PreferenceActivity implements OnSharedPreferen
 	private final short createPatternLock = 1;
 	private final short createAlfaNumericLock = 2;
 	private final short createNumericLock = 3;
+	private final short createGestureLock = 4;
 	
 	@Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -201,7 +202,12 @@ public class Preferences extends 	PreferenceActivity implements OnSharedPreferen
 		}
 		else if(LockType.GESTURE.toString() ==key){
 			cbp =(CheckBoxPreference)getPreferenceScreen().findPreference(key);
-			cbp.setChecked(sharedPreferences.getBoolean(key, false));
+			value = sharedPreferences.getBoolean(key, false);
+			cbp.setChecked(value);
+			if(value==true){
+				Intent i = new Intent(Preferences.this, CreateGestureActivity.class);
+				startActivityForResult(i, createGestureLock);
+			}
 		}
 		else if(LockType.NUMERIC.toString() ==key){
 			cbp =(CheckBoxPreference)getPreferenceScreen().findPreference(key);
@@ -254,6 +260,15 @@ public class Preferences extends 	PreferenceActivity implements OnSharedPreferen
             }
             else
                 MainActivity.accessHandler.updatePreference(LockType.NUMERIC.toString(), false);
+        	break;
+        case createGestureLock:
+        	System.out.println(resultCode  + " "+ RESULT_OK );
+            if (resultCode == RESULT_OK){               
+                //String pattern = data.getStringExtra("password");
+                MainActivity.accessHandler.updatePreference(LockTypeKey.GESTURE_KEY.toString(), "");
+            }
+            else
+                MainActivity.accessHandler.updatePreference(LockType.GESTURE.toString(), false);
         	break;
 
         }
