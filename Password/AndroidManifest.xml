@@ -8,6 +8,8 @@
         android:minSdkVersion="14"
         android:targetSdkVersion="14" />
 
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+
     <application
         android:allowBackup="true"
         android:icon="@drawable/ic_launcher"
@@ -45,6 +47,34 @@
         <activity
             android:name="com.password.NumericActivity"
             android:label="@string/title_activity_numeric" >
+        </activity>
+        <activity
+            android:name="com.password.CreateGestureActivity"
+            android:label="@string/title_activity_create_gesture" >
+        </activity>
+        <activity
+            android:name="com.password.GestureBuilderActivity"
+            android:label="@string/title_activity_gesture_builder" >
+        </activity>
+        <activity
+            android:name="com.password.ValidateGesture"
+            android:label="@string/title_activity_validate_gesture" >
+        </activity>
+        <activity
+            android:name="com.password.LoginValidatorActivity"
+            android:label="@string/title_activity_login_validator" >
+        </activity>
+        <activity
+            android:name="com.password.ValidateNumericLock"
+            android:label="@string/title_activity_validate_numeric_lock" >
+        </activity>
+        <activity
+            android:name="com.password.ValidateAlfaNumericLock"
+            android:label="@string/title_activity_validate_alfa_numeric_lock" >
+        </activity>
+        <activity
+            android:name="com.password.ValidateGestureLock"
+            android:label="@string/title_activity_validate_gesture_lock" >
         </activity>
     </application>
 
